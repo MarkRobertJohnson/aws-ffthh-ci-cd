@@ -12,14 +12,14 @@ var sprites;
 var DESIRED_SAM_COUNT = 311;
 
 function preload() {
-    game.load.spritesheet('spinner', 'squirrel.png', 64, 64);
+    game.load.spritesheet('spinner', 'squirrel.png', 32, 32);
     game.scale.scaleMode = Phaser.ScaleManager.SHOW_ALL;
 }
 
 function create() {
     game.stage.disableVisibilityChange = true;
     game.stage.backgroundColor = '#967da7';
-    sprites = game.add.physicsGroup(Phaser.Physics.ARCADE);
+    sprites = game.add.physicsGroup(Phaser.Physics.P2);
     createSprites(DESIRED_SAM_COUNT);
 }
 
